@@ -5,6 +5,8 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
   }
 
   html,
@@ -17,21 +19,25 @@ export const GlobalStyle = createGlobalStyle`
     color: inherit;
     text-decoration: none;
   }
+  li {
+    list-style-type: none;
+  }
+  section {
+    padding: 3rem 0 2rem;
+  }
+
 
   :root {
-    --bg: #f9f9f9;
-    --text: #333;
-    --accent: #ff4500;
-
-    --button-bgColor: #67C656;
-    --button-textColor: #fff;
-    --button-hoverBgColor: #5AB14A;
-    --button-hoverTextColor: #fff;
+    --bg: #D9D9D9;
+    --text: #211D1D;
+    --primary-Color: #67C656;
+    --primary-hoverColor: #5AB14A;
+    --primary-textColor: #fff;
+  }
+  ::selection {
+    background-color: var(--primary-Color);
+    color: var(--primary-textColor);
   }
 
-  [data-theme='dark'] {
-    --bg: #333;
-    --text: #fff;
-    --accent: #ff4500;
-  }
+  
 `
