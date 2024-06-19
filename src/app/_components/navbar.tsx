@@ -26,7 +26,7 @@ export const Navbar = () => {
         {links.map((link, index) => (
           <li key={index}>
             <Link
-              className={pathname === link.href ? 'active' : ''}
+              className={`link ${pathname === link.href ? 'active' : ''}`}
             href={link.href}>{link.text}</Link>
           </li>
         ))}

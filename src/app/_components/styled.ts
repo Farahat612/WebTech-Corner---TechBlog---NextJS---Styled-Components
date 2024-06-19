@@ -38,6 +38,10 @@ export const Nav = styled.nav`
     .active {
       color: var(--primary-Color);
     }
+
+    li .link:hover {
+      color: var(--primary-Color);
+    }
   }
 `
 
