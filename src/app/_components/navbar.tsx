@@ -2,13 +2,14 @@ import Link from 'next/link'
 import { Nav } from './styled'
 import Image from 'next/image'
 import Logo from '../../../public/logo/dark.png'
+import Button from '@/components/ui/Button'
 
 export const Navbar = () => {
   return (
     <Nav>
       {/* Logo */}
       <Link href='/'>
-        <Image src={Logo} alt='logo' width={60}  />
+        <Image src={Logo} alt='logo' width={70} />
       </Link>
 
       {/* Navigation */}
@@ -17,15 +18,17 @@ export const Navbar = () => {
           <Link href='/'>Home</Link>
         </li>
         <li>
-          <Link href='/about'>About</Link>
+          <Link href='/topics'>Topics</Link>
         </li>
         <li>
-          <Link href='/services'>Services</Link>
-        </li>
-        <li>
-          <Link href='/contact'>Contact</Link>
+          <Link href='/posts'>Posts</Link>
         </li>
       </ul>
+
+      {/* CTA */}
+      <Link href='/about'>
+        <Button role='button'>Write a Post</Button>
+      </Link>
     </Nav>
   )
 }

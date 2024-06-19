@@ -32,12 +32,15 @@ export const GlobalStyle = createGlobalStyle`
     --text: #211D1D;
     --primary-Color: #67C656;
     --primary-hoverColor: #5AB14A;
-    --primary-textColor: #fff;
+    --primary-textColor: #211D1D;
+
+    --secondary-Color: #121212;
+    --secondary-hoverColor: #1a1a1a;
+    --secondary-textColor: #ffffff;
   }
   ::selection {
     background-color: var(--primary-Color);
     color: var(--primary-textColor);
   }
 
-  
 `
