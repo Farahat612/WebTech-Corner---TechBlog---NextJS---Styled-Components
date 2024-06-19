@@ -34,6 +34,10 @@ export const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     gap: 2rem;
+
+    .active {
+      color: var(--primary-Color);
+    }
   }
 `
 
