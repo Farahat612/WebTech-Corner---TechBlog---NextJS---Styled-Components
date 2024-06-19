@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
-  padding-inline: 2rem;
+export const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 2rem;
   min-height: 100vh;
+  width: 100%;
   background-color: var(--bg);
-  color: var(--text);
+  position: relative;
 `
 
 export const Text = styled.p`
@@ -22,15 +22,55 @@ export const Text = styled.p`
 `
 
 export const Nav = styled.nav`
+  position: fixed;
   display: flex;
-  width: 100%;
+  width: inherit;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
+  color: var(--textLight);
 
   ul {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
+  }
+`
+
+export const Container = styled.div`
+  max-width: 1068px;
+  margin: auto;
+  padding: 0 1rem;
+  width: 100%;
+`
+
+export const HeroSection = styled.section`
+  width: 100%;
+  min-height: 25rem;
+  background-color: var(--secondary-Color);
+  color: var(--textLight);
+  display: grid;
+  place-items: center;
+  justify-content: center;
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    .title {
+      font-size: 2rem;
+      span {
+        color: var(--primary-Color);
+      }
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--textLight);
+    }
   }
 `

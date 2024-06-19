@@ -1,13 +1,14 @@
 'use client'
+import { Hero } from './_components/hero'
 import { Navbar } from './_components/navbar'
-import { Container } from './_components/styled'
+import { PageContainer } from './_components/styled'
 
 const Home = () => {
   return (
-    <Container>
+    <PageContainer>
       <Navbar />
-      <h3>Welcome to the home page</h3>
-    </Container>
+      <Hero />
+    </PageContainer>
   )
 }
 

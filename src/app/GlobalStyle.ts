@@ -30,6 +30,7 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     --bg: #D9D9D9;
     --text: #211D1D;
+    --textLight: #ffffff;
     --primary-Color: #67C656;
     --primary-hoverColor: #5AB14A;
     --primary-textColor: #211D1D;
