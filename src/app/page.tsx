@@ -1,4 +1,3 @@
-'use client'
 
 import { PageContainer } from '../components/styled-components/styled'
 
