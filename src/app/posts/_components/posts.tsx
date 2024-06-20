@@ -2,11 +2,13 @@
 
 import { useEffect, useState } from 'react'
 import { useSearchParams, usePathname } from 'next/navigation'
-import { Post } from '@/constants/types'
+import { Post as PostType } from '@/constants/types'
 import Link from 'next/link'
 
+import Post from './post'
+
 interface PostsProps {
-  posts: Post[]
+  posts: PostType[]
 }
 
 export const Posts = ({ posts }: PostsProps) => {
@@ -72,15 +74,16 @@ export const Posts = ({ posts }: PostsProps) => {
           ))}
         </ul>
       </div>
-      <div>
+      <div
+        style={{
+          display: 'grid',
+          gap: '1rem',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(300px, auto))',
+        }}
+      >
         {/* Render posts */}
         {filteredPosts.map((post) => (
-          <div key={post.id}>
-            <Link href={`/posts/${post.id}`}>
-              <h3>{post.title}</h3>
-            </Link>
-            <p>{post.tag}</p>
-          </div>
+          <Post key={post.id} post={post} />
         ))}
       </div>
     </div>

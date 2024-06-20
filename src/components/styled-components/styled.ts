@@ -78,3 +78,54 @@ export const HeroSection = styled.section`
     }
   }
 `
+
+export const PostCard = styled.div`
+  .post-box {
+    background: var(--bg);
+    box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
+    overflow: hidden;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+
+  .post-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 0.5rem;
+  }
+
+  .category {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--primary-Color);
+    text-transform: uppercase;
+  }
+
+  .post-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .post-date {
+    font-size: 0.9rem;
+    color: var(--text);
+    margin: 0.5rem 0;
+  }
+
+  .post-desc {
+    font-size: 1rem;
+    color: var(--text);
+    margin: 0.5rem 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+`
