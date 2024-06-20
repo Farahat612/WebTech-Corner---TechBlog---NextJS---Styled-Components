@@ -24,7 +24,7 @@ export const Text = styled.p`
 `
 
 export const Nav = styled.nav`
-  position: fixed;
+  position: absolute;
   display: flex;
   width: inherit;
   justify-content: space-between;
@@ -132,7 +132,7 @@ export const PostCard = styled.div`
 `
 
 export const PostDetailsContainer = styled.div`
-  background-color: var(--textLight);
+  background-color: var(--bg);
   max-width: 85vw;
   padding: 2rem;
   margin: -15rem auto 2rem;
