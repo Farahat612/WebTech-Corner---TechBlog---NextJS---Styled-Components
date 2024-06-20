@@ -26,6 +26,13 @@ export const GlobalStyle = createGlobalStyle`
     padding: 3rem 0 2rem;
   }
 
+  .container{
+    max-width: 1068px;
+    margin: auto;
+    padding: 0 1rem;
+    width: 100%;
+  }
+
 
   :root {
     --bg: #D9D9D9;

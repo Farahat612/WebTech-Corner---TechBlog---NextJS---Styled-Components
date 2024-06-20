@@ -46,13 +46,6 @@ export const Nav = styled.nav`
   }
 `
 
-export const Container = styled.div`
-  max-width: 1068px;
-  margin: auto;
-  padding: 0 1rem;
-  width: 100%;
-`
-
 export const HeroSection = styled.section`
   width: 100%;
   min-height: 25rem;
@@ -83,22 +76,3 @@ export const HeroSection = styled.section`
     }
   }
 `
-
-export const Section = styled.section`
-  padding: 2rem;
-  width: 100%;
-
-  .heading {
-    font-size: 2rem;
-    text-align: center;
-    border: 1px solid var(--primary-Color);
-    color: var(--secondary-Color);
-
-    span {
-      color: var(--primary-Color);
-    }
-  }
-`
-
-
-
