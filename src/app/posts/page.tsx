@@ -4,7 +4,7 @@ import { Posts } from './_components/posts'
 import { Post } from '@/constants/types'
 
 async function getPosts() {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts`)
+  const response = await fetch(`${process.env.API_URL}/posts`)
 
   if (!response.ok) {
     throw new Error('Failed to fetch data')
@@ -20,7 +20,7 @@ export default async function TopicsPage() {
     <PageContainer>
       <Section>
         <h2 className='heading'>
-          Explore Our <span>Topics</span>
+          Explore Our <span>Posts</span>
         </h2>
 
         <Posts posts={posts} />

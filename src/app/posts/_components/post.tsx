@@ -5,7 +5,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Post({ post }: { post: Post }) {
-
   return (
     <PostCard>
       <div className='post-box'>

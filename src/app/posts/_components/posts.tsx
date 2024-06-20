@@ -74,8 +74,11 @@ export const Posts = ({ posts }: PostsProps) => {
           ))}
         </ul>
       </div>
+
+      {/* Posts Grid */}
       <div
         style={{
+          marginTop: '1rem',
           display: 'grid',
           gap: '1rem',
           gridTemplateColumns: 'repeat(auto-fill, minmax(300px, auto))',

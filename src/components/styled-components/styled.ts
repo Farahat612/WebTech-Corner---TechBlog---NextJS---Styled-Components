@@ -59,6 +59,7 @@ export const HeroSection = styled.section`
 
   .hero-text {
     display: flex;
+    max-width: 70vw;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
@@ -127,5 +128,27 @@ export const PostCard = styled.div`
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+  }
+`
+
+export const PostDetailsContainer = styled.div`
+  background-color: var(--textLight);
+  max-width: 85vw;
+  padding: 2rem;
+  margin: -15rem auto 2rem;
+  margin-top: -15rem;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 0.5rem;
+  position: relative;
+
+  .post-img {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: auto;
+    position: relative;
   }
 `
