@@ -28,13 +28,16 @@ export const Navbar = () => {
           <li key={index}>
             <Link
               className={`link ${pathname === link.href ? 'active' : ''}`}
-            href={link.href}>{link.text}</Link>
+              href={link.href}
+            >
+              {link.text}
+            </Link>
           </li>
         ))}
       </ul>
 
       {/* CTA */}
-      <Link href='/about'>
+      <Link href='/new-post'>
         <Button role='button'>Write a Post</Button>
       </Link>
     </Nav>
