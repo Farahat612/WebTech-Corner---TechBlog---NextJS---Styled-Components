@@ -33,9 +33,9 @@ export const GlobalStyle = createGlobalStyle`
     --textLight: #ffffff;
     --primary-Color: #67C656;
     --primary-hoverColor: #5AB14A;
-    --primary-textColor: #211D1D;
+    --primary-textColor: #172317;
 
-    --secondary-Color: #121212;
+    --secondary-Color: #1a1e21;
     --secondary-hoverColor: #1a1a1a;
     --secondary-textColor: #ffffff;
   }
