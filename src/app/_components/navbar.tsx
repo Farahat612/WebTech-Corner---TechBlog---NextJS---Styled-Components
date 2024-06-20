@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { Nav } from './styled'
 import Image from 'next/image'
@@ -10,7 +12,6 @@ export const Navbar = () => {
   const links = [
     { href: '/', text: 'Home' },
     { href: '/topics', text: 'Topics' },
-    { href: '/posts', text: 'Posts' },
   ]
 
   const pathname = usePathname()
