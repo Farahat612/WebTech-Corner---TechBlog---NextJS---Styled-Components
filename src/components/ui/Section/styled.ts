@@ -13,7 +13,7 @@ export const SectionContainer = styled.section`
     font-weight: 800;
     text-align: center;
     padding: 1rem;
-    color: var(--secondary-color);
+    color: var(--secondary-Color);
 
     span {
       color: var(--primary-hoverColor);
