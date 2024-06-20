@@ -1,13 +1,9 @@
 'use client'
 
-import { PageContainer } from './_components/styled'
+import { PageContainer } from '../components/styled-components/styled'
 
 const Home = () => {
-  return (
-    <PageContainer>
-      
-    </PageContainer>
-  )
+  return <PageContainer></PageContainer>
 }
 
 export default Home

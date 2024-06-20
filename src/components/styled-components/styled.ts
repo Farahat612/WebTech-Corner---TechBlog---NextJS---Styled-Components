@@ -29,6 +29,7 @@ export const Nav = styled.nav`
   align-items: center;
   padding: 1rem 2rem;
   color: var(--textLight);
+  width: 100%;
 
   ul {
     display: flex;
@@ -82,3 +83,22 @@ export const HeroSection = styled.section`
     }
   }
 `
+
+export const Section = styled.section`
+  padding: 2rem;
+  width: 100%;
+
+  .heading {
+    font-size: 2rem;
+    text-align: center;
+    border: 1px solid var(--primary-Color);
+    color: var(--secondary-Color);
+
+    span {
+      color: var(--primary-Color);
+    }
+  }
+`
+
+
+

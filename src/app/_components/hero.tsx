@@ -1,6 +1,9 @@
 'use client'
 
-import { Container, HeroSection } from './styled'
+import {
+  Container,
+  HeroSection,
+} from '../../components/styled-components/styled'
 
 export const Hero = () => {
   return (
