@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useSearchParams, usePathname } from 'next/navigation'
 import { Post } from '@/constants/types'
+import Link from 'next/link'
 
 interface PostsProps {
   posts: Post[]
@@ -74,7 +75,12 @@ export const Posts = ({ posts }: PostsProps) => {
       <div>
         {/* Render posts */}
         {filteredPosts.map((post) => (
-          <div key={post.id}>{post.title}</div>
+          <div key={post.id}>
+            <Link href={`/posts/${post.id}`}>
+              <h3>{post.title}</h3>
+            </Link>
+            <p>{post.tag}</p>
+          </div>
         ))}
       </div>
     </div>
