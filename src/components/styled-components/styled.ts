@@ -131,9 +131,10 @@ export const PostCard = styled.div`
   }
 `
 
-export const PostDetailsContainer = styled.div`
+export const HangingContainer = styled.div`
   background-color: var(--bg);
   max-width: 85vw;
+  min-height: 40vh;
   padding: 2rem;
   margin: -15rem auto 2rem;
   margin-top: -15rem;
@@ -150,5 +151,68 @@ export const PostDetailsContainer = styled.div`
     width: 100%;
     height: auto;
     position: relative;
+  }
+`
+
+export const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--bg);
+  color: var(--text);
+
+  .heading {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--text);
+    
+    span {
+      color: var(--primary-Color);
+    }
+  }
+`
+
+export const AddPostForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+
+  /* Fields styles */
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    label {
+      font-size: 1.2rem;
+      color: var(--text);
+    }
+
+    input,
+    select,
+    textarea {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid var(--text);
+      border-radius: 0.5rem;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+  }
+
+  button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: var(--primary-Color);
+    color: var(--secondary-Color);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
   }
 `

@@ -1,9 +1,9 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import { useSearchParams, usePathname } from 'next/navigation'
+import { tags } from '@/constants/tags'
 import { Post as PostType } from '@/constants/types'
-import Link from 'next/link'
+import { usePathname, useSearchParams } from 'next/navigation'
+import { useEffect, useState } from 'react'
 
 import Post from './post'
 
@@ -12,15 +12,6 @@ interface PostsProps {
 }
 
 export const Posts = ({ posts }: PostsProps) => {
-  const tags = [
-    'All',
-    'Frontend',
-    'ReactJS',
-    'Backend',
-    'JavaScript',
-    'TailwindCSS',
-  ]
-
   const searchParams = useSearchParams()
   const pathname = usePathname()
 
