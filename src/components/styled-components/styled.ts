@@ -168,51 +168,53 @@ export const Section = styled.section`
     font-size: 2rem;
     text-transform: uppercase;
     color: var(--text);
-    
+
     span {
       color: var(--primary-Color);
     }
   }
 `
 
-export const AddPostForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+export const AddPostContainer = styled.div`
   width: 100%;
-
-  /* Fields styles */
-  div {
+  form {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
 
-    label {
-      font-size: 1.2rem;
-      color: var(--text);
+    /* Fields styles */
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      label {
+        font-size: 1.2rem;
+        color: var(--text);
+      }
+
+      input,
+      select,
+      textarea {
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid var(--text);
+        border-radius: 0.5rem;
+      }
+
+      textarea {
+        resize: vertical;
+      }
     }
 
-    input,
-    select,
-    textarea {
+    button {
       padding: 0.5rem;
       font-size: 1rem;
-      border: 1px solid var(--text);
+      background-color: var(--primary-Color);
+      color: var(--secondary-Color);
+      border: none;
       border-radius: 0.5rem;
+      cursor: pointer;
     }
-
-    textarea {
-      resize: vertical;
-    }
-  }
-
-  button {
-    padding: 0.5rem;
-    font-size: 1rem;
-    background-color: var(--primary-Color);
-    color: var(--secondary-Color);
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
   }
 `
