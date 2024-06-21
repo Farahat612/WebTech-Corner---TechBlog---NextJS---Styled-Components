@@ -91,7 +91,7 @@ export const PostCard = styled.div`
 
   .post-img {
     width: 100%;
-    height: 220px;
+    min-height: 220px;
     object-fit: cover;
     object-position: top;
     border-radius: 0.5rem;
