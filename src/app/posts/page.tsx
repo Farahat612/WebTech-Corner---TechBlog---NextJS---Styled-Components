@@ -1,4 +1,4 @@
-import { PageContainer } from '@/components/styled-components/styled'
+import { PageContainer } from '@/components/styled-components/common.styled'
 import Section from '@/components/ui/Section'
 import { Posts } from './_components/posts'
 import { Post } from '@/constants/types'

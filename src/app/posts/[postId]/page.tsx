@@ -1,5 +1,5 @@
 import { getPost } from '@/actions/get-post'
-import { HangingContainer } from '@/components/styled-components/styled'
+import { HangingContainer } from '@/components/styled-components/common.styled'
 import { Post } from '@/constants/types'
 import { getImg } from '@/lib/img-matcher'
 import Image from 'next/image'

@@ -1,4 +1,4 @@
-import { PageContainer } from '../components/styled-components/styled'
+import { PageContainer } from '@/components/styled-components/common.styled'
 
 import { getPosts } from '@/actions/get-posts'
 import { HorizontalPost } from './_components/horizontal-post'
