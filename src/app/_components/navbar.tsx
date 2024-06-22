@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Nav } from '../../components/styled-components/styled'
+import { Nav } from '@/components/styled-components/layout.styled'
 import Image from 'next/image'
 import Logo from '../../../public/logo/white.png'
 import Button from '@/components/ui/Button'

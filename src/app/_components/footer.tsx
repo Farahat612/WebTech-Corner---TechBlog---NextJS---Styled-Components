@@ -1,4 +1,4 @@
-import { FooterContainer } from '@/components/styled-components/styled'
+import { FooterContainer } from '@/components/styled-components/layout.styled'
 
 export const Footer = () => {
   return (

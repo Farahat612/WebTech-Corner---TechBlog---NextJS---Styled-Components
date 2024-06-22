@@ -1,6 +1,6 @@
 'use client'
 
-import { HeroSection } from '../../components/styled-components/styled'
+import { HeroSection } from '@/components/styled-components/layout.styled'
 
 export const Hero = () => {
   return (
