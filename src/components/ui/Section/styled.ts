@@ -39,4 +39,10 @@ export const SectionContainer = styled.section`
       background-color: var(--primary-hoverColor);
     }
   }
+
+  .content {
+    margin-top: 2rem;
+    text-align: justify;
+    font-size: 1.2rem;
+  }
 `

@@ -6,12 +6,10 @@ export const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 2rem;
   min-height: 100vh;
   width: 100%;
   background-color: var(--bg);
   position: relative;
-  padding: 2rem;
 `
 
 export const Text = styled.p`
@@ -156,27 +154,6 @@ export const HangingContainer = styled.div`
   }
 `
 
-export const Section = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  width: 100%;
-  padding: 2rem;
-  background-color: var(--bg);
-  color: var(--text);
-
-  .heading {
-    font-size: 2rem;
-    text-transform: uppercase;
-    color: var(--text);
-
-    span {
-      color: var(--primary-Color);
-    }
-  }
-`
-
 export const AddPostContainer = styled.div`
   width: 100%;
   form {
@@ -278,3 +255,4 @@ export const HorizontalPostCard = styled.div`
     }
   }
 `
+
