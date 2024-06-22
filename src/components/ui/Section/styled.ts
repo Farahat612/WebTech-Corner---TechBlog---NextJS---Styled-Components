@@ -3,7 +3,7 @@
 import styled from 'styled-components'
 
 export const SectionContainer = styled.section`
-  padding: 2rem;
+  padding: 0;
   width: 100%;
 
   .heading {

@@ -1,5 +1,6 @@
 import { getPost } from '@/actions/get-post'
 import { HangingContainer } from '@/components/styled-components/common.styled'
+import { GoBack } from '@/components/ui/GoBack'
 import { Post } from '@/constants/types'
 import { getImg } from '@/lib/img-matcher'
 import Image from 'next/image'
@@ -10,6 +11,7 @@ export default async function page({ params }: { params: { postId: string } }) {
 
   return (
     <HangingContainer>
+      <GoBack />
       <h1>{post.title}</h1>
       <Image
         src={getImg(post.tag.toLowerCase())}

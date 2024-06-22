@@ -8,7 +8,11 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button = ({ variant = 'primary', children }: ButtonProps) => {
-  return <Container $variant={variant}>{children}</Container>
+  return (
+    <Container role='button' $variant={variant}>
+      {children}
+    </Container>
+  )
 }
 
 export default Button
