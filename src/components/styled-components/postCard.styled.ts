@@ -87,7 +87,7 @@ export const PostCard = styled.div`
     object-fit: cover;
     object-position: top;
     border-radius: 0.5rem;
-    /* width: 100%; */
+    width: 100%;
     min-height: 220px;
   }
 `
@@ -125,6 +125,7 @@ export const HorizontalPostCard = styled.div`
 
     .post-img {
       width: 100%;
+      height: auto;
     }
   }
 `
