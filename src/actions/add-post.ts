@@ -21,4 +21,5 @@ export const addPost = async (post: PostToSend) => {
   }
 
   revalidatePath('/posts')
+  revalidatePath('/')
 }

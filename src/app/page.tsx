@@ -4,10 +4,20 @@ import { getPosts } from '@/actions/get-posts'
 import { HorizontalPost } from './_components/horizontal-post'
 import { type Post } from '@/constants/types'
 import Section from '@/components/ui/Section'
+import { Suspense } from 'react'
+import LoadingSkeleton from '@/components/ui/Loading'
 
 const Home = async () => {
   const posts = await getPosts()
-  const latestPosts = posts.slice(-5)
+
+  // Function to get the most recent 5 posts
+  function getMostRecentPosts(posts: Post[]): Post[] {
+    return posts
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .slice(0, 5)
+  }
+
+  const recentPosts = getMostRecentPosts(posts)
   return (
     <PageContainer>
       <Section>
@@ -27,11 +37,13 @@ const Home = async () => {
         <h2 className='heading'>
           Most <span>Recent</span> Posts
         </h2>
-        <div className='content'>
-          {latestPosts.map((post: Post) => (
-            <HorizontalPost key={post.id} post={post} />
-          ))}
-        </div>
+        <Suspense fallback={<LoadingSkeleton />}>
+          <div className='content'>
+            {recentPosts.map((post: Post) => (
+              <HorizontalPost key={post.id} post={post} />
+            ))}
+          </div>
+        </Suspense>
       </Section>
     </PageContainer>
   )
