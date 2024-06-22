@@ -1,7 +1,7 @@
 import {
   AddPostContainer,
   HangingContainer,
-} from '@/components/styled-components/styled'
+} from '@/components/styled-components/addPost.styled'
 import CreatePost from './_components/CreatePost'
 import Section from '@/components/ui/Section'
 
