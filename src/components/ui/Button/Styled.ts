@@ -24,4 +24,10 @@ export const Container = styled.div<{ $variant: Button_Variants }>`
         ? 'var(--primary-hoverColor)'
         : 'var(--secondary-hoverColor)'};
   }
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.7rem;
+
+  }
 `

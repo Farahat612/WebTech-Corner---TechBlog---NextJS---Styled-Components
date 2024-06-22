@@ -25,6 +25,17 @@ export const Nav = styled.nav`
       color: var(--primary-Color);
     }
   }
+
+  @media screen and (max-width: 480px) {
+    img {
+      width: 60px;
+      height: auto;
+    }
+    ul {
+      gap: 0.8rem;
+      font-size: 0.8rem;
+    }
+  }
 `
 
 export const HeroSection = styled.section`
@@ -55,6 +66,19 @@ export const HeroSection = styled.section`
     .subtitle {
       font-size: 1.2rem;
       color: var(--textLight);
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .hero-text {
+      max-width: 80vw;
+      .title {
+        font-size: 1.5rem;
+      }
+
+      .subtitle {
+        font-size: 0.9rem;
+      }
     }
   }
 `

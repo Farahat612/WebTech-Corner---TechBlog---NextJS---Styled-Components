@@ -3,9 +3,6 @@
 import styled from 'styled-components'
 
 export const PageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: start;
   min-height: 100vh;
   width: 100%;
   background-color: var(--bg);
@@ -14,6 +11,9 @@ export const PageContainer = styled.div`
   .page-content {
     width: 100%;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
 `
 export const HangingContainer = styled.div`
@@ -37,6 +37,10 @@ export const HangingContainer = styled.div`
     height: auto;
     position: relative;
   }
+
+  @media (max-width: 480px) {
+    margin-top: -17rem;
+  }
 `
 
 export const TagsNav = styled.div`
@@ -57,6 +61,15 @@ export const TagsNav = styled.div`
     &.active {
       background-color: var(--primary-Color);
       color: var(--bg);
+    }
+  }
+
+  @media (max-width: 480px) {
+    flex-wrap: wrap;
+    gap: 0.1rem;
+
+    .tag {
+      padding: 0.5rem;
     }
   }
 `

@@ -29,6 +29,11 @@ export const PostTitle = styled.h3`
     transform: scale(1.1);
     transform-origin: left center;
   }
+  
+
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+  }
 `
 
 export const PostDate = styled.span`
@@ -65,6 +70,7 @@ export const PostCard = styled.div`
     overflow: hidden;
     border-radius: 0.5rem;
     padding: 1rem;
+    width: 100%;
   }
 
   .post-info {
@@ -82,7 +88,7 @@ export const PostCard = styled.div`
     object-fit: cover;
     object-position: top;
     border-radius: 0.5rem;
-    width: 100%;
+    /* width: 100%; */
     min-height: 220px;
   }
 `
@@ -113,5 +119,13 @@ export const HorizontalPostCard = styled.div`
     border-radius: 0.5rem;
     width: 50%;
     height: auto;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+
+    .post-img {
+      width: 100%;
+    }
   }
 `

@@ -45,4 +45,10 @@ export const SectionContainer = styled.section`
     text-align: justify;
     font-size: 1.2rem;
   }
+
+  @media (max-width: 480px) {
+    .heading {
+      font-size: 1.2rem;
+    }
+  }
 `

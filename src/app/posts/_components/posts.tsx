@@ -64,7 +64,7 @@ export const Posts = ({ posts }: PostsProps) => {
           marginTop: '1rem',
           display: 'grid',
           gap: '1rem',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(350px, auto))',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(320px, auto))',
         }}
       >
         {/* Render posts */}
