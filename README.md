@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# WebTech-Corner | Slash NextJS - Styled-Components Internship Filtration Task
+
+WebTech-Corner is a Next.js simple blog web app leveraging Styled-Components for styling, aimed at providing a simple read and add blog posts functionalities. This project is part of the [Slash](https://slash-eg.com/) NextJS Internship Filtration Process.
+
+## Demo
+
+You can access a live demo [here](), or you may watch the following video demo:
+
+## Skills nad Techniques Covered
+
+- Server Side Rendering.
+- Server Side Data Fetching using Servre Actions.
+- CLient Side filtration and sorting.
+- Loading State Management.
+- Simple basic form validation.
+- Responsive design and SEO optimization.
+
+## Technologies Used
+
+- [TypeScript](https://www.typescriptlang.org/)
+- [NextJS](https://nextjs.org/)
+- [Styled Components](https://styled-components.com/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [React Toastify](https://fkhadra.github.io/react-toastify/introduction/)
+
+## Project Structure
+
+```shell
+└── `src/`: Contains the main application code
+├── `actions/`: Server actions for API requests
+├── `app/`: Main Route
+│ ├── `_components/`: Components for Main Route
+│ └── `new-post/`: Adding a new post route
+│ └── `posts/`: Posts page Route
+│ ├── `_components/` : Components for this Route
+│ └── `[postId]/`
+│ ├── `_components/`: Components for this Route
+│ ├── `layout.tsx`: Root Layout
+│ ├── `page.tsx`: Home Route Page
+├── `assets/`: Assets
+├── `components/`: Global Components
+│ ├── `styled-components/`: Styled-comonents
+│ └── `ui/`: UI Reusable Components
+├── `constants/`: Reusable contstants and types
+└── `lib/`: Reusable utilities
+├── `providers.tsx`: Context Providers for the entire App
+```
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy up and running follow these simple steps.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Node.js (v14 or later)
+- npm
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clone the repo
 
-## Learn More
+   ```sh
+   git clone https://github.com/your_username_/WebTech-Corner.git
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Change directory
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```shell
+   cd WebTech-Corner
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. Install dependencies
 
-## Deploy on Vercel
+   ```shell
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Start the development server
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```shell
+   npm run dev
+   ```
+
+5. Visit `http://127.0.0.1:3000/` in your browser.
+
+## Limitaions
+
+> Application functionalities and dependencies decisions were Task requirements oriented, which drived these limitations:
+
+1. Using client side styling library like `Styled-Components` is not the best option as an integration with NextJS `SSR`.
+2. The Application doesn't support Full `CRUD` functionalities, only Create and Read. (To be added later)
+
+## Acknwledgment
+
+> This application is built and developed as part of Internship hiring filtration process for [slash](https://slash-eg.com/) Egyptian start-up.
+
+## Contributing
+
+Contributions are welcome! Please read the [contributing guidelines](CONTRIBUTING.md) first.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
