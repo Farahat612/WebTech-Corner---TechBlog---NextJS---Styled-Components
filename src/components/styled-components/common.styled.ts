@@ -10,6 +10,11 @@ export const PageContainer = styled.div`
   width: 100%;
   background-color: var(--bg);
   position: relative;
+
+  .page-content {
+    width: 100%;
+    padding: 2rem;
+  }
 `
 export const HangingContainer = styled.div`
   background-color: var(--bg);

@@ -8,13 +8,15 @@ export default async function TopicsPage() {
   const posts: Post[] = await getPosts()
   return (
     <PageContainer>
-      <Section>
-        <h2 className='heading'>
-          Explore Our <span>Posts</span>
-        </h2>
+      <div className='page-content'>
+        <Section>
+          <h2 className='heading'>
+            Explore Our <span>Posts</span>
+          </h2>
 
-        <Posts posts={posts} />
-      </Section>
+          <Posts posts={posts} />
+        </Section>
+      </div>
     </PageContainer>
   )
 }
