@@ -7,6 +7,7 @@ import Providers from '@/providers'
 import { Hero } from './_components/hero'
 import { Navbar } from './_components/navbar'
 import { Toaster } from 'sonner'
+import { Footer } from './_components/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -33,6 +34,7 @@ export default function RootLayout({
           <Navbar />
           <Hero />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>

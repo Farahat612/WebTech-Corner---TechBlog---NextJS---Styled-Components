@@ -256,3 +256,14 @@ export const HorizontalPostCard = styled.div`
   }
 `
 
+export const FooterContainer = styled.footer`
+  background-color: var(--secondary-Color);
+  color: var(--textLight);
+  padding: 1rem 0;
+  text-align: center;
+  width: 100%;
+
+  span {
+    color: var(--primary-Color);
+  }
+`
