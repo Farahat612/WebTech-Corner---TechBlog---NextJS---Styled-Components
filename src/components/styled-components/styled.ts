@@ -11,6 +11,7 @@ export const PageContainer = styled.div`
   width: 100%;
   background-color: var(--bg);
   position: relative;
+  padding: 2rem;
 `
 
 export const Text = styled.p`
@@ -114,7 +115,8 @@ export const PostCard = styled.div`
     -webkit-box-orient: vertical;
   }
 
-  .post-date {
+  .post-date,
+  .post-mins {
     font-size: 0.9rem;
     color: var(--text);
     margin: 0.5rem 0;
@@ -215,6 +217,64 @@ export const AddPostContainer = styled.div`
       border: none;
       border-radius: 0.5rem;
       cursor: pointer;
+    }
+  }
+`
+
+export const HorizontalPostCard = styled.div`
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--bg);
+  box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  .post-img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 0.5rem;
+  }
+
+  .post-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+
+    .category {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--primary-Color);
+      text-transform: uppercase;
+    }
+
+    .post-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--text);
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    .post-date,
+    .post-mins {
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .post-desc {
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      color: var(--text);
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
     }
   }
 `
