@@ -159,7 +159,7 @@ export const AddPostContainer = styled.div`
   form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
 
     /* Fields styles */
     div {
@@ -179,6 +179,7 @@ export const AddPostContainer = styled.div`
         font-size: 1rem;
         border: 1px solid var(--text);
         border-radius: 0.5rem;
+        background-color: var(--bg);
       }
 
       textarea {
@@ -257,6 +258,7 @@ export const HorizontalPostCard = styled.div`
 `
 
 export const FooterContainer = styled.footer`
+  margin-top: auto;
   background-color: var(--secondary-Color);
   color: var(--textLight);
   padding: 1rem 0;

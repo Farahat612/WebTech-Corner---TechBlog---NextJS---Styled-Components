@@ -1,11 +1,9 @@
 import {
   AddPostContainer,
   HangingContainer,
-  Section,
 } from '@/components/styled-components/styled'
 import CreatePost from './_components/CreatePost'
-
-
+import Section from '@/components/ui/Section'
 
 export default function page() {
   return (
