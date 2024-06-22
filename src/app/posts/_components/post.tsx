@@ -22,9 +22,15 @@ export default function Post({ post }: { post: Post }) {
         <Link href={`/posts/${post.id}`}>
           <h3>{post.title}</h3>
         </Link>
-        <span className='post-date'>
-          {new Date(post.date).toLocaleDateString()}
-        </span>
+        <p>
+          <span className='post-date'>
+            {new Date(post.date).toLocaleDateString()}
+          </span>
+          <span>
+            <span> • </span>
+            <span className='post-mins'>{post.minutes} min read</span>
+          </span>
+        </p>
         <p className='post-desc'>{post.content}</p>
       </div>
     </PostCard>
