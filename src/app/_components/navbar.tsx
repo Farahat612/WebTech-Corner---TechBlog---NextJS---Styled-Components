@@ -19,7 +19,7 @@ export const Navbar = () => {
     <Nav>
       {/* Logo */}
       <Link href='/'>
-        <Image src={Logo} alt='logo' width={70} />
+        <Image src={Logo} alt='logo' width={70} priority />
       </Link>
 
       {/* Navigation */}
