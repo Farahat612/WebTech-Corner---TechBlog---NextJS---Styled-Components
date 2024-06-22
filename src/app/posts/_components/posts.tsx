@@ -6,6 +6,7 @@ import { usePathname, useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 import Post from './post'
+import { TagsNav } from '@/components/styled-components/common.styled'
 
 interface PostsProps {
   posts: PostType[]
@@ -15,12 +16,12 @@ export const Posts = ({ posts }: PostsProps) => {
   const searchParams = useSearchParams()
   const pathname = usePathname()
 
-  // Get the selected tag from URL or default to 'All'
+  // Getting the selected tag from URL or default to 'All'
   const selectedTagFromUrl = searchParams.get('tag') || 'All'
 
   const [selectedTag, setSelectedTag] = useState(selectedTagFromUrl)
 
-  // Update the state when the URL parameter changes
+  // Updating the state when the URL parameter changes
   useEffect(() => {
     setSelectedTag(selectedTagFromUrl)
   }, [selectedTagFromUrl])
@@ -34,7 +35,7 @@ export const Posts = ({ posts }: PostsProps) => {
     window.history.pushState({}, '', newUrl)
   }
 
-  // Filter posts based on the selected tag
+  // Filtering posts based on the selected tag
   const filteredPosts =
     selectedTag === 'All'
       ? posts
@@ -44,26 +45,17 @@ export const Posts = ({ posts }: PostsProps) => {
     <div>
       <div>
         {/* Tags navigation */}
-        <ul
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            gap: '1rem',
-            padding: '1rem 0',
-          }}
-        >
+        <TagsNav>
           {tags.map((tag) => (
             <li
               key={tag}
-              style={{
-                cursor: 'pointer',
-              }}
+              className={`tag ${selectedTag === tag && 'active'}`}
               onClick={() => handleTagClick(tag)}
             >
               <span>{tag}</span>
             </li>
           ))}
-        </ul>
+        </TagsNav>
       </div>
 
       {/* Posts Grid */}

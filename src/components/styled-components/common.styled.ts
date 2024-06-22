@@ -33,3 +33,25 @@ export const HangingContainer = styled.div`
     position: relative;
   }
 `
+
+export const TagsNav = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+
+  .tag {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: all 0.3s;
+
+    &:hover,
+    &.active {
+      background-color: var(--primary-Color);
+      color: var(--bg);
+    }
+  }
+`
