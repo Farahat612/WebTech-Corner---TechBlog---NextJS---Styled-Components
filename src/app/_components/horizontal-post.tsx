@@ -27,12 +27,12 @@ export const HorizontalPost = ({ post }: { post: Post }) => {
       <div className='post-info'>
         <Category>{post.tag}</Category>
         <Link href={`/posts/${post.id}`}>
-          <PostTitle className='horizontal'>{post.title}</PostTitle>
+          <PostTitle>{post.title}</PostTitle>
         </Link>
         <p>
           <PostDate>{new Date(post.date).toLocaleDateString()}</PostDate>
           <span>
-            <span> • </span>
+            <span className='dot'> • </span>
             <PostMins>{post.minutes} min read</PostMins>
           </span>
         </p>

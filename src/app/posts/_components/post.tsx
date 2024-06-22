@@ -24,19 +24,22 @@ export default function Post({ post }: { post: Post }) {
           height={200}
           priority
         />
-        {/* TAG */}
-        <Category>{post.tag}</Category>
-        <Link href={`/posts/${post.id}`}>
-          <PostTitle>{post.title}</PostTitle>
-        </Link>
-        <p>
-          <PostDate>{new Date(post.date).toLocaleDateString()}</PostDate>
-          <span>
-            <span> • </span>
-            <PostMins>{post.minutes} min read</PostMins>
-          </span>
-        </p>
-        <PostDesc>{post.content}</PostDesc>
+
+        <div className='post-info'>
+          {/* TAG */}
+          <Category>{post.tag}</Category>
+          <Link href={`/posts/${post.id}`}>
+            <PostTitle>{post.title}</PostTitle>
+          </Link>
+          <p>
+            <PostDate>{new Date(post.date).toLocaleDateString()}</PostDate>
+            <span>
+              <span className='dot'> • </span>
+              <PostMins>{post.minutes} min read</PostMins>
+            </span>
+          </p>
+          <PostDesc>{post.content}</PostDesc>
+        </div>
       </div>
     </PostCard>
   )

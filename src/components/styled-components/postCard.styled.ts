@@ -4,22 +4,30 @@ import styled from 'styled-components'
 
 export const Category = styled.h2`
   font-size: 0.9rem;
+  line-height: 1.5;
   font-weight: 500;
-  color: var(--primary-Color);
+  background-color: var(--primary-Color);
+  color: var(--textLight);
+  width: fit-content;
+  padding: 0 0.8rem;
+  margin-bottom: 0.3rem;
+  border-radius: 1rem;
   text-transform: uppercase;
 `
 
 export const PostTitle = styled.h3`
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--text);
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  transition: all 0.3s ease;
 
-  &.horizontal {
-    font-size: 1.5rem;
+  &:hover {
+    transform: scale(1.1);
+    transform-origin: left center;
   }
 `
 
@@ -53,10 +61,21 @@ export const PostDesc = styled.p`
 export const PostCard = styled.div`
   .post-box {
     background: var(--bg);
-    box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     overflow: hidden;
     border-radius: 0.5rem;
     padding: 1rem;
+  }
+
+  .post-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+
+    .dot {
+      color: var(--primary-Color);
+    }
   }
 
   .post-img {
@@ -72,7 +91,7 @@ export const HorizontalPostCard = styled.div`
   gap: 1rem;
   padding: 1rem;
   background-color: var(--bg);
-  box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 0.5rem;
   overflow: hidden;
   margin-block-start: 1rem;
@@ -82,6 +101,10 @@ export const HorizontalPostCard = styled.div`
     flex-direction: column;
     gap: 0.5rem;
     padding: 0.5rem 1rem;
+
+    .dot {
+      color: var(--primary-Color);
+    }
   }
 
   .post-img {
