@@ -16,7 +16,7 @@ export const Category = styled.h2`
 `
 
 export const PostTitle = styled.h3`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--text);
   overflow: hidden;
@@ -29,7 +29,6 @@ export const PostTitle = styled.h3`
     transform: scale(1.1);
     transform-origin: left center;
   }
-  
 
   @media (max-width: 480px) {
     font-size: 1.2rem;

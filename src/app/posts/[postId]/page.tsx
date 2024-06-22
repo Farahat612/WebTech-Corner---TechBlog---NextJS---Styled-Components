@@ -5,10 +5,25 @@ import { GoBack } from '@/components/ui/GoBack'
 import { Post } from '@/constants/types'
 import { getImg } from '@/lib/img-matcher'
 import Image from 'next/image'
+import { Metadata } from 'next'
 
-export default async function page({ params }: { params: { postId: string } }) {
-  const postId = params.postId
-  const post: Post = await getPost(postId)
+type Props = {
+  params: {
+    postId: string
+  }
+}
+
+export const generateMetadata = async ({ params }: Props) => {
+  const post: Post = await getPost(params.postId)
+
+  return {
+    title: `Post | ${post.title}`,
+    description: post.content,
+  }
+}
+
+export default async function page({ params }: Props) {
+  const post: Post = await getPost(params.postId)
 
   return (
     <HangingContainer>
