@@ -4,7 +4,10 @@ WebTech-Corner is a Next.js simple blog web app leveraging Styled-Components for
 
 ## Demo
 
-You can access a live demo [here](), or you may watch the following video demo:
+You can access a live demo [here](https://web-tech-corner.vercel.app/), or you may watch the following video demo:
+
+https://github.com/Farahat612/WebTech-Corner---TechBlog---NextJS---Styled-Components/assets/67427124/057d17eb-5ec8-4509-84e6-6496f21b21cb
+
 
 ## Skills nad Techniques Covered
 
