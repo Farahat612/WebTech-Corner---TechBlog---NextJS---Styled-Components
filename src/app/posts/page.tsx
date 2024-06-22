@@ -3,6 +3,7 @@ import { PageContainer } from '@/components/styled-components/common.styled'
 import Section from '@/components/ui/Section'
 import { Post } from '@/constants/types'
 import { Posts } from './_components/posts'
+import { getSortedPost } from '@/lib/latest-posts'
 
 export const metadata = {
   title: 'WebTech Corner | Posts',
@@ -12,6 +13,7 @@ export const metadata = {
 
 export default async function TopicsPage() {
   const posts: Post[] = await getPosts()
+  const sortedPosts = getSortedPost(posts)
   return (
     <PageContainer>
       <div className='page-content'>
@@ -20,7 +22,7 @@ export default async function TopicsPage() {
             Explore Our <span>Posts</span>
           </h2>
 
-          <Posts posts={posts} />
+          <Posts posts={sortedPosts} />
         </Section>
       </div>
     </PageContainer>

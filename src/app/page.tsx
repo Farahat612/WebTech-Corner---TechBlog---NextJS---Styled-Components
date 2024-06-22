@@ -3,12 +3,12 @@ import { PageContainer } from '@/components/styled-components/common.styled'
 import { getPosts } from '@/actions/get-posts'
 import Section from '@/components/ui/Section'
 import { type Post } from '@/constants/types'
-import { getMostRecentPosts } from '@/lib/latest-posts'
+import { getSortedPost } from '@/lib/latest-posts'
 import { HorizontalPost } from './_components/horizontal-post'
 
 const Home = async () => {
   const posts = await getPosts()
-  const recentPosts = getMostRecentPosts(posts)
+  const recentPosts = getSortedPost(posts).slice(0, 5)
   return (
     <PageContainer>
       <div className='page-content'>
