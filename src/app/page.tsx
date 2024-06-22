@@ -1,11 +1,9 @@
 import { PageContainer } from '@/components/styled-components/common.styled'
 
 import { getPosts } from '@/actions/get-posts'
-import { HorizontalPost } from './_components/horizontal-post'
-import { type Post } from '@/constants/types'
 import Section from '@/components/ui/Section'
-import { Suspense } from 'react'
-import LoadingSkeleton from '@/components/ui/Loading'
+import { type Post } from '@/constants/types'
+import { HorizontalPost } from './_components/horizontal-post'
 
 const Home = async () => {
   const posts = await getPosts()
@@ -37,13 +35,11 @@ const Home = async () => {
         <h2 className='heading'>
           Most <span>Recent</span> Posts
         </h2>
-        <Suspense fallback={<LoadingSkeleton />}>
-          <div className='content'>
-            {recentPosts.map((post: Post) => (
-              <HorizontalPost key={post.id} post={post} />
-            ))}
-          </div>
-        </Suspense>
+        <div className='content'>
+          {recentPosts.map((post: Post) => (
+            <HorizontalPost key={post.id} post={post} />
+          ))}
+        </div>
       </Section>
     </PageContainer>
   )
