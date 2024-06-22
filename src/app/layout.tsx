@@ -4,10 +4,11 @@ import { Inter } from 'next/font/google'
 import { keywords } from '@/constants/keywords'
 import Providers from '@/providers'
 
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import { Footer } from './_components/footer'
 import { Hero } from './_components/hero'
 import { Navbar } from './_components/navbar'
-import { Toaster } from 'sonner'
-import { Footer } from './_components/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,7 +31,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={inter.className}>
         <Providers>
-          <Toaster />
+          <ToastContainer theme='colored' autoClose={2500} />
           <Navbar />
           <Hero />
           {children}

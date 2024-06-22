@@ -1,7 +1,7 @@
 'use client'
 
 import { tags } from '@/constants/tags'
-import { toast } from 'sonner'
+import { toast } from 'react-toastify'
 import { addPost } from '@/actions/add-post'
 import { redirect } from 'next/navigation'
 
