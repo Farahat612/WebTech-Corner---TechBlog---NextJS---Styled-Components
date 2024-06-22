@@ -1,4 +1,11 @@
-import { PostCard } from '@/components/styled-components/styled'
+import {
+  PostCard,
+  Category,
+  PostTitle,
+  PostDate,
+  PostMins,
+  PostDesc,
+} from '@/components/styled-components/postCard.styled'
 import { type Post } from '@/constants/types'
 import { getImg } from '@/lib/img-matcher'
 import Image from 'next/image'
@@ -18,20 +25,18 @@ export default function Post({ post }: { post: Post }) {
           priority
         />
         {/* TAG */}
-        <h2 className='category'>{post.tag}</h2>
+        <Category>{post.tag}</Category>
         <Link href={`/posts/${post.id}`}>
-          <h3>{post.title}</h3>
+          <PostTitle>{post.title}</PostTitle>
         </Link>
         <p>
-          <span className='post-date'>
-            {new Date(post.date).toLocaleDateString()}
-          </span>
+          <PostDate>{new Date(post.date).toLocaleDateString()}</PostDate>
           <span>
             <span> • </span>
-            <span className='post-mins'>{post.minutes} min read</span>
+            <PostMins>{post.minutes} min read</PostMins>
           </span>
         </p>
-        <p className='post-desc'>{post.content}</p>
+        <PostDesc>{post.content}</PostDesc>
       </div>
     </PostCard>
   )

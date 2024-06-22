@@ -1,4 +1,11 @@
-import { HorizontalPostCard } from '@/components/styled-components/styled'
+import {
+  HorizontalPostCard,
+  Category,
+  PostTitle,
+  PostDate,
+  PostMins,
+  PostDesc,
+} from '@/components/styled-components/postCard.styled'
 import Image from 'next/image'
 import React from 'react'
 import { getImg } from '@/lib/img-matcher'
@@ -18,20 +25,18 @@ export const HorizontalPost = ({ post }: { post: Post }) => {
       />
 
       <div className='post-info'>
-        <h2 className='category'>{post.tag}</h2>
+        <Category>{post.tag}</Category>
         <Link href={`/posts/${post.id}`}>
-          <h3 className='post-title'>{post.title}</h3>
+          <PostTitle className='horizontal'>{post.title}</PostTitle>
         </Link>
         <p>
-          <span className='post-date'>
-            {new Date(post.date).toLocaleDateString()}
-          </span>
+          <PostDate>{new Date(post.date).toLocaleDateString()}</PostDate>
           <span>
             <span> • </span>
-            <span className='post-mins'>{post.minutes} min read</span>
+            <PostMins>{post.minutes} min read</PostMins>
           </span>
         </p>
-        <p className='post-desc'>{post.content}</p>
+        <PostDesc className='horizontal'>{post.content}</PostDesc>
       </div>
     </HorizontalPostCard>
   )
