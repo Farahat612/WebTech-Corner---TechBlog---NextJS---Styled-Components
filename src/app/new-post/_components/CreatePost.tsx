@@ -1,12 +1,17 @@
 'use client'
 
-import { tags } from '@/constants/tags'
-import { toast } from 'react-toastify'
 import { addPost } from '@/actions/add-post'
+import { tags } from '@/constants/tags'
 import { redirect } from 'next/navigation'
+import { useState } from 'react'
+import { toast } from 'react-toastify'
 
 export default function CreatePost() {
-  async function onSubmit(formData: FormData) {
+  const [isLoading, setIsLoading] = useState(false)
+
+  async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    const formData = new FormData(event.currentTarget)
     const title = formData.get('title') as string
     const tag = formData.get('tag') as string
     const content = formData.get('content') as string
@@ -22,18 +27,19 @@ export default function CreatePost() {
       content,
     }
 
+    setIsLoading(true)
     const result = await addPost(post)
-
     if (result?.error) {
       toast.error(result.error)
+      setIsLoading(false)
     } else {
       toast.success('Post added successfully')
-      redirect('/posts')
+      setIsLoading(false)
     }
   }
 
   return (
-    <form action={onSubmit}>
+    <form onSubmit={onSubmit}>
       {/* Post Title */}
       <div>
         <label htmlFor='title'>Title</label>
@@ -59,7 +65,11 @@ export default function CreatePost() {
       </div>
 
       {/* Submit Button */}
-      <button type='submit'>Add Post</button>
+      <div>
+        <button disabled={isLoading} className='submit' type='submit'>
+          {isLoading ? 'Adding Post...' : 'Add Post'}
+        </button>
+      </div>
     </form>
   )
 }

@@ -2,8 +2,6 @@
 
 import styled from 'styled-components'
 
-
-
 export const AddPostContainer = styled.div`
   width: 100%;
   form {
@@ -37,11 +35,12 @@ export const AddPostContainer = styled.div`
       }
     }
 
-    button {
-      padding: 0.5rem;
+    .submit {
+      padding: 0.75rem 0.5rem;
       font-size: 1rem;
+      font-weight: 600;
       background-color: var(--primary-Color);
-      color: var(--secondary-Color);
+      color: var(--textLight);
       border: none;
       border-radius: 0.5rem;
       cursor: pointer;

@@ -2,6 +2,7 @@
 
 import { Post } from '@/constants/types'
 import { revalidatePath } from 'next/cache'
+import { redirect } from 'next/navigation'
 
 type PostToSend = Pick<Post, 'title' | 'tag' | 'content'>
 
@@ -22,4 +23,5 @@ export const addPost = async (post: PostToSend) => {
 
   revalidatePath('/posts')
   revalidatePath('/')
+  redirect('/posts')
 }

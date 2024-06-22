@@ -4,7 +4,6 @@ import Section from '@/components/ui/Section'
 import CreatePost from './_components/CreatePost'
 import { GoBack } from '@/components/ui/GoBack'
 
-
 export default function page() {
   return (
     <HangingContainer>
@@ -13,10 +12,10 @@ export default function page() {
         <h2 className='heading'>
           Add <span>New</span> Post
         </h2>
-        <AddPostContainer>
-          <CreatePost />
-        </AddPostContainer>
       </Section>
+      <AddPostContainer>
+        <CreatePost />
+      </AddPostContainer>
     </HangingContainer>
   )
 }
