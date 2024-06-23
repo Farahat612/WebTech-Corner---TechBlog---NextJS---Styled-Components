@@ -8,7 +8,6 @@ You can access a live demo [here](https://web-tech-corner.vercel.app/), or you m
 
 https://github.com/Farahat612/WebTech-Corner---TechBlog---NextJS---Styled-Components/assets/67427124/057d17eb-5ec8-4509-84e6-6496f21b21cb
 
-
 ## Skills nad Techniques Covered
 
 - Server Side Rendering.
@@ -63,7 +62,7 @@ To get a local copy up and running follow these simple steps.
 1. Clone the repo
 
    ```sh
-   git clone https://github.com/your_username_/WebTech-Corner.git
+   git clone https://github.com/Farahat612/WebTech-Corner.git
    ```
 
 2. Change directory
